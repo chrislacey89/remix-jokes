@@ -2,6 +2,7 @@ import type { ActionFunction } from "remix";
 import { useActionData, redirect, json } from "remix";
 import { db } from "~/utils/db.server";
 
+// These validation functions can be use on both the client and the server.
 function validateJokeContent(content: string) {
   if (content.length < 10) {
     return `That joke is too short`;
